@@ -33,7 +33,7 @@
                 @endforeach
 
             </table>
-            {!! $services->render() !!}
+            {{--{!! $services->render() !!}--}}
 
         </div>
     </div>

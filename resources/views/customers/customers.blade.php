@@ -33,7 +33,7 @@
      @endforeach
 
     </table>
-   {!! $customers->render() !!}
+   {{--{!! $customers->render() !!}--}}
 
   </div>
  </div>
