@@ -19,7 +19,7 @@ class CustomerController extends Controller
     }
 
     public function getAllCustomers() {
-        $customers = \App\Customer::paginate(5);
+        $customers = \App\Customer::all()->sortBy('name')/*paginate(5)*/;
 
         return view('customers.customers')->with(compact('customers'));
     }

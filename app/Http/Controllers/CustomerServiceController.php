@@ -21,6 +21,7 @@ class CustomerServiceController extends Controller
 
     public function sell_with_customer($id)
     {
+        //TODO: 1. При выборе услуги не обновляется в инпуте базовая цена
         $customer = \App\Customer::findOrFail($id);
         $services = \App\Service::all()->sortBy('name');
         return view("sell.sell_with_customer")->with(compact('customer', 'services'));

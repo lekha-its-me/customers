@@ -17,7 +17,7 @@ class ServiceController extends Controller
     }
 
     public function getAllServices() {
-        $services = \App\Service::paginate(5);
+        $services = \App\Service::all()->sortBy('name')/*paginate(5)*/;
 
         return view('services.services')->with(compact('services'));
     }
