@@ -15,18 +15,17 @@
                         <input type="text" class="form-control" name="surname" id="exampleInputPassword1" placeholder="Фамилия">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Телефон</label>
-                        <input type="phone" class="form-control" name="phone" id="exampleInputPassword1" placeholder="Телефон">
+                        <label for="phone">Телефон</label>
+                        <input type="phone" class="form-control" name="phone" id="phone" placeholder="Телефон">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Дата рождения</label>
-                        <input type="date" class="form-control" name="birthday" id="exampleInputPassword1" placeholder="Дата рождения">
+                        <label for="date">Дата рождения</label>
+                        <input type="date" class="form-control" name="birthday" id="date" placeholder="Дата рождения">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Комментарий</label>
                         <textarea class="form-control" name="comment" rows="3"></textarea>
                     </div>
-
                     <button type="submit" class="btn btn-default">Сохранить</button>
                     <a href="{{ url('customers') }}"><button type="button" class="btn btn-default">Отмена</button></a>
                     {{ csrf_field() }}
