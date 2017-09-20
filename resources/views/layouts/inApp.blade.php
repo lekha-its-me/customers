@@ -71,6 +71,7 @@
                 <li><a href="{{ url('/customers') }}"><i class="fa fa-table"></i> Клиенты</a></li>
                 <li><a href="{{ url('/services') }}"><i class="fa fa-list"></i> Услуги</a></li>
                 <li><a href="{{ url('/view') }}"><i class="fa fa-list"></i> Отчеты</a></li>
+                <li><a href="{{ url('/materials') }}"><i class="fa fa-dropbox"></i> Материалы</a></li>
                 <li><a href="{{ url('/sell') }}"><i class="fa fa-cart-plus"></i> Продать услугу</a></li>
             </ul>
 

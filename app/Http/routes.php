@@ -63,3 +63,10 @@ Route::get('sell', 'CustomerServiceController@sell');
 Route::post('sell', 'CustomerServiceController@transaction');
 Route::get('view', 'CustomerServiceController@totalServicePrice');
 Route::post('view', 'CustomerServiceController@totalServicePriceByDate');
+
+//Material routes
+Route::get('materials', 'MaterialController@getAllMaterials');
+Route::get('materials/create', 'MaterialController@createMaterial');
+Route::post('materials/create', 'MaterialController@addMaterial');
+Route::get('materials/{id}', 'MaterialController@viewMaterial');
+Route::post('materials', 'MaterialController@editMaterial');

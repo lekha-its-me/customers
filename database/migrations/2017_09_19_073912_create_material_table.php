@@ -12,7 +12,7 @@ class CreateMaterialTable extends Migration
      */
     public function up()
     {
-        Schema::create('material', function (Blueprint $table) {
+        Schema::create('materials', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->timestamps();
