@@ -5,7 +5,6 @@
 @section('content')
     <div class="ts-main-content">
             <div class="container-fluid">
-
                 <div class="row">
                     <div class="col-md-12">
 
@@ -40,22 +39,22 @@
                                         <div class="panel panel-default">
                                             <div class="panel-body bk-info text-light">
                                                 <div class="stat-panel text-center">
-                                                    <div class="stat-panel-number h1 ">58</div>
+                                                    <div class="stat-panel-number h1 ">{{ $made_services }}</div>
                                                     <div class="stat-panel-title text-uppercase">Оказано услуг</div>
                                                 </div>
                                             </div>
-                                            <a href="#" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+                                            <a href="#" class="block-anchor panel-footer text-center">&nbsp;</a>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="panel panel-default">
                                             <div class="panel-body bk-warning text-light">
                                                 <div class="stat-panel text-center">
-                                                    <div class="stat-panel-number h1 ">18</div>
+                                                    <div class="stat-panel-number h1 ">{{ $average }}</div>
                                                     <div class="stat-panel-title text-uppercase">Средняя стоимость</div>
                                                 </div>
                                             </div>
-                                            <a href="#" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+                                            <a href="#" class="block-anchor panel-footer text-center">&nbsp;</i></a>
                                         </div>
                                     </div>
                                 </div>

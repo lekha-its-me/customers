@@ -28,6 +28,19 @@ class HomeController extends Controller
     {
         $customers = DB::table('customers')->count();
         $services = DB::table('services')->count();
-        return view('home')->with(compact('customers', 'services'));
+        $made_services = DB::table('customer_service')->count();
+
+        $sum = 0;
+        $count = 0;
+        $average = 0;
+        $serv = \App\Service::all()->sortBy('name');
+
+        foreach ($serv as $item)
+        {
+            $sum += \App\Service::getTotalPrice($item->id);
+            $count++;
+        }
+        $average = $sum / $count;
+        return view('home')->with(compact('customers', 'services', 'made_services', 'average'));
     }
 }
