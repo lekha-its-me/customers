@@ -47,6 +47,8 @@ Route::post('customers/edit/{id}', 'CustomerController@editCustomer');
 Route::get('customers/delete/{id}', 'CustomerController@removeCustomer');
 Route::delete('customers/delete/{id}', 'CustomerController@deleteCustomer');
 
+Route::get('getserviceprice/{id}', 'ServiceController@getServicePrice');
+
 //Services routes
 Route::get('services', 'ServiceController@getAllServices')->name("services.list");
 Route::post('services', 'ServiceController@addService');
@@ -73,3 +75,7 @@ Route::post('materials', 'MaterialController@editMaterial');
 
 Route::get('buy', 'BuyingMaterialController@buy');
 Route::post('buy', 'BuyingMaterialController@save');
+Route::get('buyingMaterial/report', 'BuyingMaterialController@totalBuyingPrice');
+Route::post('buyingMaterial/report', 'BuyingMaterialController@totalBuyingPriceByDate');
+Route::get('sell/total', 'BuyingMaterialController@showReport');
+Route::post('sell/total', 'BuyingMaterialController@totalPriceByDate');

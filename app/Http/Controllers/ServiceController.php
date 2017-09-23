@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Controllers\Response;
 
 use App\Customer;
 use App\Service;
@@ -76,5 +77,17 @@ class ServiceController extends Controller
     {
         $service = \App\Service::findOrFail($id);
         return view("services.delete")->with(compact('service'));
+    }
+
+    public function getServicePrice($id)
+    {
+        $service = \App\Service::findOrFail($id);
+        if($service)
+        {
+            return response()->json([
+                'price' => $service->basic_price,
+            ]);
+        }
+
     }
 }

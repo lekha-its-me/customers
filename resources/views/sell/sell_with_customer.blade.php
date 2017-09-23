@@ -4,12 +4,21 @@
 
 @section('script')
 <script type="text/javascript">
+        function getPrice(id){
+        		 $.ajax({
+        			 url: "/getserviceprice/"+id,
+        			 success: function(data){
+        				 $('#basic_price').val(data.price);
+        			 }
+        		 });
+        	 }
+
         $("#service").change(function(){
             var choice = $('#service').val();
-            var service = $('#selected');
-            service.val(choice);
+            getPrice(choice);
         });
 </script>
+
 @endsection
 
 @section("content")
