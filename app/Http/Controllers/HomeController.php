@@ -33,7 +33,7 @@ class HomeController extends Controller
         $sum = DB::table('customer_service')->sum('price');
         $count = DB::table('customer_service')->count();
 
-        $average = $sum / $count;
+        $average = intval($sum / $count);
         return view('home')->with(compact('customers', 'services', 'made_services', 'average'));
     }
 }
