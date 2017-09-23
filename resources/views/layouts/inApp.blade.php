@@ -71,7 +71,14 @@
                 <li><a href="{{ url('/customers') }}"><i class="fa fa-table"></i> Клиенты</a></li>
                 <li><a href="{{ url('/services') }}"><i class="fa fa-list"></i> Услуги</a></li>
                 <li><a href="{{ url('/view') }}"><i class="fa fa-list"></i> Отчеты</a></li>
-                <li><a href="{{ url('/materials') }}"><i class="fa fa-dropbox"></i> Материалы</a></li>
+                {{--<li><a href="{{ url('/materials') }}"><i class="fa fa-dropbox"></i> Материалы</a></li>--}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dropbox"></i> Материалы <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url('/materials') }}">Материалы</a></li>
+                        <li><a href="#">Купить материал</a></li>
+                    </ul>
+                </li>
                 <li><a href="{{ url('/sell') }}"><i class="fa fa-cart-plus"></i> Продать услугу</a></li>
             </ul>
 

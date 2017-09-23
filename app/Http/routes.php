@@ -70,3 +70,6 @@ Route::get('materials/create', 'MaterialController@createMaterial');
 Route::post('materials/create', 'MaterialController@addMaterial');
 Route::get('materials/{id}', 'MaterialController@viewMaterial');
 Route::post('materials', 'MaterialController@editMaterial');
+
+Route::get('buy', 'BuyingMaterialController@buy');
+Route::post('buy', 'BuyingMaterialController@save');

@@ -30,6 +30,15 @@ class Service extends Model
         return $totalPrice;
     }
 
+    public static function getTotal($beginDate, $endDate)
+    {
+        $totalPrice = DB::table('customer_service')
+            ->where('created_at','>',$beginDate)
+            ->where('created_at','<',$endDate)
+            ->sum('price');
+        return $totalPrice;
+    }
+
     public function customers()
     {
         return $this->belongsToMany('\App\Customer')

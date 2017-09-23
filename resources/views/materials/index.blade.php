@@ -1,6 +1,6 @@
 @extends('layouts.inApp')
 
-@section('title', 'Список клиентов')
+@section('title', 'Список материалов')
 
 @section('content')
     <div class="container-fluid">
