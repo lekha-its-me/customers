@@ -15,6 +15,8 @@
 
         $("#service").change(function(){
             var choice = $('#service').val();
+            var service = $('#selected');
+            service.val(choice);
             getPrice(choice);
         });
 </script>
