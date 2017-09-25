@@ -35,11 +35,11 @@ class HomeController extends Controller
 
         $last_arr = [];
         $last_arr_item = [];
-        $last = DB::table('customer_service')->take(5)->get();
+        $last = DB::table('customer_service')->latest()->take(5)->get();
         foreach ($last as $item)
         {
             $customer = DB::table('customers')->where('id', $item->customer_id)->first();
-            array_push($last_arr_item, $customer->name.' '.$customer->surname);
+            array_push($last_arr_item, $customer->name.' '.((isset($customer->surname))?$customer->surname:''));
             $service = DB::table('services')->where('id', $item->service_id)->first();
             array_push($last_arr_item, $service->name);
             array_push($last_arr_item, $item->price);
