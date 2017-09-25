@@ -26,6 +26,6 @@ class CreateMaterialTable extends Migration
      */
     public function down()
     {
-        Schema::drop('material');
+        Schema::drop('materials');
     }
 }

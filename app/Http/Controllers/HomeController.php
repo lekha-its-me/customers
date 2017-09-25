@@ -33,7 +33,21 @@ class HomeController extends Controller
         $sum = DB::table('customer_service')->sum('price');
         $count = DB::table('customer_service')->count();
 
+        $last_arr = [];
+        $last_arr_item = [];
+        $last = DB::table('customer_service')->take(5)->get();
+        foreach ($last as $item)
+        {
+            $customer = DB::table('customers')->where('id', $item->customer_id)->first();
+            array_push($last_arr_item, $customer->name.' '.$customer->surname);
+            $service = DB::table('services')->where('id', $item->service_id)->first();
+            array_push($last_arr_item, $service->name);
+            array_push($last_arr_item, $item->price);
+            array_push($last_arr, $last_arr_item);
+            $last_arr_item = [];
+        }
+
         $average = intval($sum / $count);
-        return view('home')->with(compact('customers', 'services', 'made_services', 'average'));
+        return view('home')->with(compact('customers', 'services', 'made_services', 'average', 'last_arr'));
     }
 }

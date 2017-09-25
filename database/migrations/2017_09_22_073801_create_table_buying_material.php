@@ -12,7 +12,12 @@ class CreateTableBuyingMaterial extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('buying_materials', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('material_id');
+            $table->string('price');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateTableBuyingMaterial extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('buying_materials');
     }
 }

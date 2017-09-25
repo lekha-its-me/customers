@@ -29,4 +29,13 @@
 			// you can configure `msgErrorClass` and `msgInvalidFileExtension` as well
 	});
 
+	 function getPrice(id){
+		 $.ajax({
+			 url: "/services/"+id,
+			 success: function(data){
+				 alert( "Прибыли данные: " + data );
+			 }
+		 });
+	 }
+
  });

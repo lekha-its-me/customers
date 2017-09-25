@@ -8,7 +8,7 @@ class Material extends Model
 {
     public function buyingMaterial()
     {
-        return $this->hasMany('\App\Material');
+        return $this->hasMany('\App\BuyingMaterial');
     }
 }
 
